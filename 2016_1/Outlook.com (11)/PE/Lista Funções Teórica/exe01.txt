@@ -1,0 +1,5 @@
+1. O que são e para que servem as funções?
+
+Funções são trechos de códigos que servem para otimizar nosso código, podendo até mesmo por meio dessas
+manipulá-los para que se adeque da melhor forma. Na otimização como por exemplo podemos uzá-la quando
+vamos repetir um trecho de código muitas vezes.

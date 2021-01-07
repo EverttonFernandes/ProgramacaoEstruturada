@@ -1,0 +1,8 @@
+13. Supondo que um ponteiro p esteja apontando para um vetor do tipo int. Logo após é apresentadaa seguinte linha:
+
+printf("%d",*(p+7));
+
+O que aparecerá na tela? Por quê?
+
+Mostrará o conteúdo da posição 7 do vetor. Pois quando mandamos o p apontar para vet, automaticamente ele apontará para sua primeira
+posição, logo, quando somamos o 7, dizemos para ele apontar para a posição 7 e mostrar seu conteúdo com o *(p+7);

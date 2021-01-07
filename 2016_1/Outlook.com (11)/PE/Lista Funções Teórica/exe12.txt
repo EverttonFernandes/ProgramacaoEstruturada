@@ -1,0 +1,52 @@
+12. Considerando o código abaixo: 
+
+int calc(char vet[]){
+    int ret=0;
+    while (vet[ret]!='\0')
+        ret++;
+	return ret; 
+}
+int main(){
+    char frase[500];
+    gets(frase);
+    int mat = calc(frase);
+    printf("%i",mat);
+    return 0;
+}
+
+--> a) O que a função calc faz? Explique linha a linha.
+A função calc calcula o tamanho da frase enviada por parâmetro.
+
+int calc(char vet[]){		Declaro função calc e recebo por parâmetro o vetor vet
+    int ret=0;				Declaro variável ret
+    while (vet[ret]!='\0')	Enquanto o meu vetor[ret] for diferente de zero, ou seja, enquanto não estiver no fim,
+        ret++;				Acumulo mais 1 na minha variável ret, fazendo com que ela avance para a próxima posição do vetor
+	return ret; 			Retorno o valor final de ret que será o tamanho da minha frase.
+}
+int main(){
+    char frase[500];  			Declaro um vetor frase de 500 posições,
+    gets(frase);				Capturo essa frase
+    int mat = calc(frase);		Envio por parâmetro essa frase e recebo da função calc um valor
+    printf("%i",mat);			Imprimo o tamanho da frase
+    return 0;
+}
+
+
+
+--> c) Reescreva o programa utilizando somente variáveis globais, e substitua a função por um procedimento.
+
+int ret=0;
+char frase[500];
+int mat;
+
+int calc(char vet[]){
+    while (vet[ret]!='\0')
+        ret++;
+	return ret; 
+}
+int main(){
+    gets(frase);
+    mat = calc(frase);
+    printf("%i",mat);
+    return 0;
+}

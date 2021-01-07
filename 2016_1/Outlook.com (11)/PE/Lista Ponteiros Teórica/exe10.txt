@@ -1,0 +1,6 @@
+10. Supondo que p seja um ponteiro para float, explique a diferença entre os comandos p++, *p++, (*p)++, e *(p++)
+
+p++ : p aponta para a próxima posição de memória (4 bytes a frente)
+*p++ : incrementa conteúdo da variável para qual p está apontando.
+(*p)++ : incrementa conteúdo da variável para qual p está apontando.
+*(p++): acessa o conteúdo da próxima posição de memória;

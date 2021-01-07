@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+
+/*
+1.2.
+Escreva  uma  função  que  passe  por  referência  um  vetor  de  caracteres.  Esta  função  deve
+inverter  o  conteúdo  do  vetor.  Ex:  Se  o  usuário  passar  um  vetor  contendo  a  string
+"programação", ao fim da função o vetor deve conter "oacamargorp".
+*/
+
+void inverte(char *p,int tam,char *inv){
+    int i,j=0;
+    for(i=tam;i>=0;i--){
+       *(p+i)=*(inv+j);
+       j++;
+    }
+}
+
+main(){
+int tam;
+char palavra[50], invertida[50];
+printf("Digite uma palavra:\n");
+gets(palavra);
+tam=strlen(palavra)-1;
+strcpy(invertida,palavra);
+inverte(palavra,tam,invertida);
+printf("\n%s",palavra);
+}

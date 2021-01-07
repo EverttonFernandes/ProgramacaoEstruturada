@@ -1,0 +1,10 @@
+6. Supondo que c seja um ponteiro para char e i um ponteiro para int, explique a diferença entre realizar as operações i++ e c++.
+
+
+Operação i++: incrementará o conteúdo da variável para qual i está apontando. 
+	Exemplo: Supomos que i aponta para x (int x), e x valha 10. Cada vez que faço i++ o conteúdo de x incrementa, ou seja, será 11;
+	(Aponta para 4 bytes depois.)
+
+Operação c++: incrementará o conteúdo da variável para qual c está apontando.
+	Exemplo: Definindo que c aponta para y (char y), e y seja A. Cada vez que faço c++ o conteúdo de y incrementa, ou seja, será B;
+	(Aponta para 1 byte depois.)

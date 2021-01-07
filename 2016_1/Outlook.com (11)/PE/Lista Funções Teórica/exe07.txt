@@ -1,0 +1,4 @@
+7. Quais os dois tipos possíveis de passagem de parâmetros? Explique a diferença entre cada tipo.
+
+funcao(a, b); Passagem por valor, que é quando enviamos o valor em si da variável por parâmetro
+funcao($a, $b); Passagem por referência, que é quando enviamos o endereço de memória em que está armazenada estas variáveis.

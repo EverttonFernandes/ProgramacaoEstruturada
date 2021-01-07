@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+#include<windows.h>
+char lane1[20]={'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'};
+char lane2[20]={'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'};
+char lane3[20]={'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'};
+
+void lanes(){
+    char op;
+    int cont=0,i=0,j=20;
+    while(op!=27){
+        if(kbhit()){
+            op = getch();
+        }
+        system("cls");
+        puts(lane1);
+        puts(lane2);
+        puts(lane3);
+        printf("%i",cont);
+        Sleep(500);
+        if(op=='1'){
+            lane1[i]='k';
+            lane1[i-1]='-';
+            i++;
+            lane1[j-1]='H';
+            lane1[j]='-';
+            j--;
+        }
+        cont++;
+    }
+}
+
+main(){
+lanes();
+}

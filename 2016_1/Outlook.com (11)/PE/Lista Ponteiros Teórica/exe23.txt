@@ -1,0 +1,3 @@
+23. Supondo que exista uma variável chamada var, o que apareceria na tela caso mandássemos mostrar *&var? Explique o porquê
+
+Se esta variável fosse um ponteiro, mostraria o conteúdo do endereço de memória em que está var, ou seja, conteúdo de var.

@@ -1,0 +1,21 @@
+7. Supondo o código abaixo:
+
+int *p;
+int num;
+p = &num;
+
+Diga se cada uma das comparações é verdadeira ou falsa, e justifique sua resposta:
+
+a)num == &p; FALSA
+não há valor definido para num, por tanto não é possível afirmar que o valor de num é igual ao numero do endereço
+de memória que está armazenado o ponteiro p;
+
+b)num == *p; VERDADEIRA
+dizer que o valor que está contido em num é o mesmo que dizer que é igual ao valor da variável para qual p está apontando, 
+e no caso, p aponta para num, ou seja, sim, conteúdo de num é igual a conteúdo de num;
+
+c)p == *num; FALSA 
+num não é um ponteiro
+
+d)p == &num; VERDADEIRA
+p contém o endereço de memória de num.

@@ -1,0 +1,12 @@
+22. Observe o código abaixo:
+
+int *p,*q,**r;			Declaro ponteiros p, q e um ponteiro de ponteiro r
+int x=10,y=100;			Declaro variáveis x e y e já atribuo a elas os valores 10 e 100 respectivamente.
+p = &x;					p recebe endereço de memória de x, ou seja, aponta para x.
+r = &p;					r recebe o endereço de memória do ponteiro p, ou seja, aponta para p
+q = &y;					q recebe o endereço de memória de y, ou seja, aponta para y.
+*r = q;					conteúdo de p será igual o de y, ou seja, 100;
+*p = 25;				x recebe 25
+*q++;					incremento conteúdo de y.
+
+Qual será o conteúdo das variáveis x e y após o trecho de código ter sido executado? Justifique sua resposta explicando o código detalhadamente.

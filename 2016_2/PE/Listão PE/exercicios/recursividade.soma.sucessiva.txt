@@ -1,0 +1,19 @@
+///Ex: 5x3 = 5+5+5.
+#include<stdio.h>
+
+int soma_suc(int x, int z){
+    if(z==1)
+        return x;
+
+
+
+    return x+soma_suc( x, z-1);
+}
+
+
+
+main(){
+
+printf("%i", soma_suc(5,5));
+
+}

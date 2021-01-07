@@ -1,0 +1,4 @@
+3. Diferencie os operadores de ponteiros & e * em C
+
+& : ponteiro acessará a posição de memória em que a variável para qual o ponteiro está apontando está armazenada.
+* : acessa o conteúdo da variavel para qual o ponteiro está apontando.

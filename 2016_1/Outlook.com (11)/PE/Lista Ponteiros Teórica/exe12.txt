@@ -1,0 +1,4 @@
+12. Supondo que vet seja um vetor, e p seja um ponteiro do mesmo tipo do vetor. Qual a diferença entre se fazer a atribuição p = vet 
+e p = &vet[0]? Explique sua resposta
+
+Nenhuma pois ambos apontarão para a primeira posição do vetor.

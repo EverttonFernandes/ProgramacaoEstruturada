@@ -1,0 +1,35 @@
+9. Analise o código abaixo:
+
+int a,b,c,d;
+
+void f(){
+	d = pow(b,2)-4*a*c;
+	return; 
+}
+int main(){
+    scanf("%i %i %i",&a,&b,&c);
+    f();
+    printf("%i",d);
+    getch();
+    return 0;
+}
+
+a) O que a função apresentada faz? 
+A função apresentada faz o delta da bháskara
+
+b) Reescreva o programa, eliminando as variáveis globais e utilizando passagem de parâmetros e retorno da função.
+
+void f(int a, int b, int c){
+	int d;
+	d = pow(b,2)-4*a*c;
+	return d; 
+}
+int main(){
+	int a,b,c,d;
+    scanf("%i %i %i",&a,&b,&c);
+    f(a, b, c);
+    printf("%i",d);
+    getch();
+    return 0;
+}
+

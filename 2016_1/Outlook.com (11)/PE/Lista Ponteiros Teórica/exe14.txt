@@ -1,0 +1,5 @@
+14. Supondo um vetor do tipo char chamado vet. A quinta posição de um vetor pode ser acessada pelo comando *(vet+5)? Caso contrário justifique e sugira uma solução nos mesmos moldes. E se o vetor fosse do tipo int, o que mudaria? Justifique.
+
+Não, pois quando declaro a expressão *(vet+5) digo para o ponteiro para apontar para a posição 6 do vetor. A correção seria *(vet+4);
+
+Se o ponteiro fosse do tipo int não mudaria nada, pois continuaria acessando a 6 posição, então a mudança deveria ser mantida.

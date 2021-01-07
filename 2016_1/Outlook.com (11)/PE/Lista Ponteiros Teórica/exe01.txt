@@ -1,0 +1,4 @@
+1. O que é e para que serve um ponteiro?
+
+Um ponteiro é um tipo especial de variável que serve para referenciar/guardar uma posição de memória
+de uma outra variável e até mesmo o conteúdo da mesma, podendo manipulá-la

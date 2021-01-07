@@ -1,0 +1,15 @@
+Tempo: 234.9s
+Jogador everton recrutou um soldado na lane 1.
+Tempo: 239.7s
+Jogador everton recrutou um soldado na lane 2.
+Tempo: 240.2s
+Jogador everton recrutou um soldado na lane 3.
+Tempo: 245.0s
+Jogador leo recrutou um soldado na lane 1.
+Tempo: 245.1s
+Jogador leo recrutou um soldado na lane 2.
+Tempo: 246.8s
+Jogador leo recrutou um soldado na lane 3.
+Tempo: 274.0s
+Jogador leo venceu o jogo com 0 pontos.
+---------------------------------------

@@ -1,0 +1,5 @@
+5. Explique qual a diferença entre um ponteiro do tipo float, int e char.
+
+float: ponteiro do tipo float poderá apontar somente para variáveis do tipo float; 
+int: ponteiro do tipo int poderá apontar somente para variáveis do tipo int.	
+char: ponteiro do tipo char poderá apontar somente para variáveis do tipo char. 

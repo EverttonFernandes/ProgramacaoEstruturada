@@ -1,0 +1,7 @@
+3. Explique o que são e qual a diferenças entre variáveis locais e globais.
+
+Variáveis globais servem para todos os trechos de códigos, independente se está dentro
+de funções ou não, elas terão o mesmo valor em todo meu código.
+Já as variáveis locais são válidas apenas dentro da função em que está sendo executada, tendo 
+seu valor único dentro de cada uma delas, independente se em outra função tem uma variável com 
+o mesmo nome ou não, o seu valor e seu procedimento é valido somente dentro da função em que foi declarada.

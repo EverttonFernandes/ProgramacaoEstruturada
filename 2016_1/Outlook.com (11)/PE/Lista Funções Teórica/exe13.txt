@@ -1,0 +1,46 @@
+13) O código abaixo é referente a uma função que recebe um vetor, o tamanho máximo deste vetor, o índice do último número que está ocupando o vetor, e um quarto número a ser inserido. A função deve inserir este número no início do vetor, deslocando todos os outros uma posição para a "frente" deste vetor. O nome desta estrutura é "fila". Caso o vetor jé esteja cheio, a função deve retornar 0, caso a inserção tenha sido feita com sucesso, 1.
+
+void insere(int &p, int tam, int m, int num){
+    int i;
+    if (m+1 > t){
+       return;
+    }
+    else {
+        for(i = t; i > 0; i++){
+            *p+i = *p+i-1;
+        }
+        p = num;
+		return;
+	} 
+}
+
+
+
+a) Aponte todos os erros existentes no código acima, explicando cada erro e sugerindo alterações.
+--> void insere(int &p, int tam, int m, int num) = correção para declaração do ponteiro que deve ser *p.
+
+--> if (m+1 > t){
+       return;		= return 0; deve retornar 0;
+    }
+
+--> for(i = t; i > 0; i++) = i deve decrementar em vez de incrementar
+
+--> *p+i = *p+i-1; = ficaria *(p+i) = *(p+i-1) pois estou acessando o conteúdo de cada posição, primeiro ando a posição depois acesso. 
+
+--> p = num;  *p[i] = num; 
+
+
+b) Reescreva a função a fim desta executar corretamente a tarefa descrita.
+void insere(int *p[], int tam, int m, int num){
+    int i;
+    if (m+1 > t){
+       return 0;
+    }
+    else {
+        for(i = t; i > 0; i--){
+            *(p+i) = *(p+i-1);
+        }
+        *p[i] = num;
+		return 1;
+	} 
+}

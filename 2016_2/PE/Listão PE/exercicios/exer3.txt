@@ -1,0 +1,27 @@
+#include<stdio.h>
+main(){
+int i=0,j,k,cont[50],maior=0;
+char frase[50],letra;
+do{
+    letra=getche();
+    if(letra!=13){
+        frase[i] = letra;
+        i++;
+    }
+}while(letra!=13 && i<50);
+for(j=0;j<=i;j++){
+    cont[j] = 0;
+    for(k=0;k<=i;k++){
+        if(frase[j] == frase[k]){
+            cont[j]++;
+        }
+    }
+}
+printf("\n");
+for(j=0;j<=i;j++){
+    if(cont[j]>maior){
+        maior = j;
+    }
+}
+printf("Caractere: %c",frase[maior]);
+}

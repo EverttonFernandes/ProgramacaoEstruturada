@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+struct terreno{
+    float comp;
+    float larg;
+    float valor;
+    char prop[50];
+};
+int c=0;
+struct terreno cad[100]; ///fica limitado a 100 cadastros.
+
+void cadastrar(int t){
+int i;
+    for(i=0;i<t;i++){
+        printf("\ncomprimento do terreno: ");
+        scanf("%f", &cad[c].comp);
+        printf("\nlargura do terreno: ");
+        scanf("%f", &cad[c].larg);
+        printf("\nvalor do terreno: ");
+        scanf("%f", &cad[c].valor);
+        printf("\nproprietario: ");
+        fflush(stdin);
+        gets(cad[c].prop);
+        c++;
+        system("cls");
+    }
+}
+
+int custo_benef(){
+int i, cb, melhor_p=0, melhor_ind=0;
+ for(i=0;i<c;i++){
+    cb=cad[i].valor/(cad[i].comp*cad[i].larg);
+
+    if(cb<melhor_p || i==0){
+        melhor_p=cb;
+        melhor_ind=i;
+    }
+}
+return melhor_ind;
+}
+
+main(){
+int t;
+printf("quantos terrenos deseja cadastrar:");
+scanf("%i", &t);
+system("cls");
+cadastrar(t);
+
+printf("\n%i", custo_benef());
+
+
+
+
+}

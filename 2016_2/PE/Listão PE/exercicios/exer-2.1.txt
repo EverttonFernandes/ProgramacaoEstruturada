@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+/*
+2.1.
+Escreva um programa que contenha uma função que grave em um arquivo .doc um milhão
+de caracteres de a até z aleatórios. Escreva outra função que busque dentro desse arquivo e
+mostre  quantas  ocorrências  de  um  caractere  especificado  pelo
+usuário  existem.  O  usuário deve  especificar o nome do arquivo que será criado e  consultado. Mostre  uma mensagem
+de erro caso o arquivo não possa ser aberto
+.
+*/
+void escreve(char nome[50]){
+    srand(time(NULL));
+    int i;
+    char c;
+    FILE *arq;
+    arq=fopen(nome,"r+");
+    if(arq==NULL){
+        printf("\nErro ao abrir o arquivo!!");
+    }else{
+        for(i=0;i<1000000;i++){
+            c=rand()%26+97;
+            fputc(c,arq);
+        }
+    }
+    fclose(arq);
+}
+
+int consulta(char nome[50], char p){
+    char c;
+    int cont=0;
+    FILE *arq;
+    arq=fopen(nome,"r");
+    if(arq==NULL){
+        printf("\nErro ao abrir o arquivo!!");
+    }else{
+        while(!feof(arq)){
+            c=fgetc(arq);
+            if(p==c){
+                cont++;
+            }
+        }
+    }
+    fclose(arq);
+    return cont;
+}
+
+main(){
+char nome[50],c;
+printf("Digite o nome do arquivo que deseja consultar:");
+scanf("%s",&nome);
+printf("Digite o caractere que deseja ser consultado:");
+scanf(" %c",&c);
+escreve(nome);
+printf("\n%i ocorencias de %c",consulta(nome,c),c);
+}

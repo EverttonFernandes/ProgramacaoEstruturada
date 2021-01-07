@@ -1,0 +1,1 @@
+main(){ char *f,l; int cont=0; f = (char*)malloc(sizeof(char)); do{ l = getche(); *(f+cont) = l; cont++; f = (char*)realloc(f,(cont+1)*sizeof(char)); }while(l!=13); *(f+cont) = '\0'; printf("\n%s",f); }

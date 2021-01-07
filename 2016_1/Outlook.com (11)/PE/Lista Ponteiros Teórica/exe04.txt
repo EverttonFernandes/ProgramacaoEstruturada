@@ -1,0 +1,4 @@
+4. Assumindo que o endereço da variável i foi atribuída ao ponteiro p, qual a forma correta de referenciar i através do ponteiro?
+p = &i;
+
+*p;

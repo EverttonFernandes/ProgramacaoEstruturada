@@ -1,0 +1,12 @@
+15. Explique detalhadamente o que o trecho de código abaixo faz:
+
+int main(){
+	int vet[10],*pv,i=0;	Declaro um vetor de 10 posições, um ponteiro *pv, e i iniciando em 0;
+
+	pv = vet; 				Aqui declaro que pv apontará para vet (posição inicial = 0);
+	while (pv <&vet[10]){   Condição: Enquanto o meu ponteiro estiver apontando para uma posição menor que a posição 10 do vetor;
+		i++;				Meu i incrementa;
+		*pv = i;			A posição para qual o meu ponteiro está apontando recebe o valor de i;
+		pv++;				Meu ponteiro aponta para a próxima posição do vetor.
+	}
+}

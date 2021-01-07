@@ -1,0 +1,4 @@
+6. Explique o que são e para que serve a passagem de parâmetros para funções.
+
+Parâmetros são valores de uma função enviadas para uma outra em que são recebidos para 
+cálculos e procedimentos realizados na mesma.

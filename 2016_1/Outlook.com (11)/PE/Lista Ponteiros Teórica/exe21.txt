@@ -1,0 +1,11 @@
+21. Supondo o código abaixo
+
+int x=10, *p, **pp;
+p = &x;
+pp = &p;
+printf("%d",*pp);
+
+O que aparecerá na tela? Justifique sua resposta.
+
+Aparecerá o endereço de memória do ponteiro p, pois no momento que atribuo o endereço de memória de p à pp, 
+pp gaurdará este endereço.

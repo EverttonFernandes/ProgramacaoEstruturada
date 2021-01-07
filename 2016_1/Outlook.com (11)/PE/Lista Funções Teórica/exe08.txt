@@ -1,0 +1,55 @@
+8. O que é e para que serve o protótipo de uma função? Mostre um exemplo de sua utilização em uma programa, bem como o mesmo exemplo sem a utilização do protótipo.
+
+Protótipo de uma função é quando chamamos uma função antes da função main, para que se possa declará-la em qualquer parte do código
+sem que precise criá-la antes do main.
+
+exemplo:
+
+-- SEM PROTÓTIPO --                                         
+
+int resp(int a, int b){										
+	int resposta;											
+
+	resposta = a * b;									
+	resposta/=2;
+
+	return resposta;
+}
+
+int main(){
+	int a, b, valor;
+
+	printf("Valor A: ");
+	scanf("%i", &a);
+	printf("Valor B: ");
+	scanf("%i", &b);
+
+	valor = resp(a, b);
+	printf("Resposta: %i", valor);
+}
+
+
+-- COM PROTÓTIPO --
+
+int resp(int a, int b);
+
+int main(){
+	int a, b, valor;
+
+	printf("Valor A: ");
+	scanf("%i", &a);
+	printf("Valor B: ");
+	scanf("%i", &b);
+
+	valor = resp(a, b);
+	printf("Resposta: %i", valor);
+}
+
+int resp(int a, int b){										
+	int resposta;											
+
+	resposta = a * b;									
+	resposta/=2;
+
+	return resposta;
+}

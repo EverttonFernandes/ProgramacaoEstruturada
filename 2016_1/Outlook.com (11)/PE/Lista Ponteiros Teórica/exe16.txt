@@ -1,0 +1,5 @@
+16. O que a função sizeof() faz? O que irá retornar caso pedíssemos para mostrar na tela o valor de retorno de sizeof(int)? e de sizeof(char)? Explique
+
+sizeof() retorna o tamanho que o tipo de variável ocupa.
+sizeof(int) retornaria 4bytes;
+sizeof(char) retornaria 1byte;

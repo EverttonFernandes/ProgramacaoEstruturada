@@ -1,0 +1,3 @@
+11. Explique qual a relação que um vetor tem com um ponteiro.
+
+Um vetor é um ponteiro, pois sempre que o declaramos automaticamente apontamos para sua primeira posição(0);

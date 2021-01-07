@@ -1,0 +1,11 @@
+19. Como é feita a declaração de um ponteiro para ponteiroe para que eles servem? Dê um exemplo de uso
+
+int/char/float **nomeponteiro;
+	exemplo:
+		int *p, **q, num; 
+		p = &num;
+		q = p;
+		
+um ponteiro de um ponteiro seve para referenciar e armazenar o endereço de memória de outro ponteiro, pondendo
+manipular aravéz deste o valor de uma variável não armazenada diretamente dentro dele (ponteiro de ponteiro) e sim armazenada
+dentro do ponteiro que está sendo referenciado.

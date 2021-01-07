@@ -1,0 +1,4 @@
+4. O que significa dizer que uma função é do tipo void? Qual a diferença para uma função tipo char, int e float?
+
+Uma função do tipo void não retornará nenhum valor, já funções do tipo int retornam uma resposta int, 
+funções do tipo char retorna uma resposta char, e uma função do tipo float retorna valor float.

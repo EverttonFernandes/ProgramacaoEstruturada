@@ -1,0 +1,4 @@
+5. O que e é e para que serve o comando return? Qual a diferença do seu uso em um procedimento e em uma função?
+
+O return é uma palavra reservada do sistema que serve para retornar uma resposta. No seu uso em uma função
+ela retornará uma resposta da mesma, fazendo assim com que a variável em algum de nossos códigos a receba.

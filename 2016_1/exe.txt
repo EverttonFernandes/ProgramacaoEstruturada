@@ -1,0 +1,30 @@
+/**
+* remove
+* =====================================================================
+*/
+ #include <stdio.h>
+ #include <stdlib.h>
+
+int remover(int *vet, int t){
+   int r,i;
+   t--;
+   r = *(vet+t);
+   vet = (int*)realloc(vet, sizeof(int));
+
+   return r;
+}
+
+/** MAIN
+  * ------------------------------------------ */
+int main (){
+   int i, result;
+   int t = 10;
+   int *vet = (int*)malloc(sizeof(int)*t);
+
+   for ( i =1; i <= t; i++) {
+      *(vet+i) = i;
+   }
+
+   result = remover(vet,t);
+   printf("\n%i",result);
+}

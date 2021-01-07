@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<time.h>
+void escreve(){
+FILE *arq=fopen("lista2ponto3texto", "w");
+srand(time(NULL));
+int i, j, t;
+char string[30];
+    for(i=0;i<10;i++){
+        t=rand()%16+10;
+            for(j=0;j<t;j++){
+
+                string[j]=rand()%26+97;
+            }
+             string[j]='\n';
+                j++;
+            string[j]='\0';
+            fputs(string, arq);
+        }
+}
+
+
+void busca(){
+FILE *arq=fopen("lista2ponto3texto", "r");
+char string[30];
+    while(!feof(arq)){
+    fgets(string,30, arq);
+        if(strlen(string)>20){
+            printf("%s\n", string);
+        }
+    }
+
+}
+
+
+
+
+
+main(){
+//escreve();
+busca();
+}
+

@@ -1,0 +1,38 @@
+11. Observe o código abaixo:
+
+int f2(int x, int y){
+    int z,i;
+    z = x;
+    for (i=1 ; i<y ; i++){
+		z+=x; 
+	}
+	return z; 
+}
+int f1(int x, int y){
+    int z,i;
+    if (y == 0){
+       z = 1;
+    }else{
+    	z = x;
+    }
+    for (i=1 ; i<y ; i++){
+        z = f2(z,x);
+    }
+	return z; 
+}
+int main(){
+    int a,b,c;
+    scanf("%i %i",&a,&b);
+    c = f1(a,b);
+    printf("%i",c);
+    return 0;
+}
+
+a) Caso seja digitado como entrada no scanf presente na função main, os valores 2 e 8, o que aparecerá na tela? E se os valores forem 3 e 4?
+
+2 e 8 : 256
+3 e 4 : 81
+
+b) O que este programa faz? Explique seu funcionamento.
+Potenciação por soma. O programa recebe dois valores e envia para uma funçao que guarda esses valores , responsável por fazer uma potenciação 
+atravéz de uma outra função onde é feita uma soma.

@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+/*
+1.5.Escreva uma função que receba por valor um caractere, e por referência um vetor tipo char (string).
+Esta função deve concatenar esta string com o caractere, sem usar a função strcat.
+Dica: use o caractere '\0' para demarcar o fim de string.*/
+void concatena(char *vet,char c){
+    int i;
+    *(vet+strlen(vet))=c;
+    *(vet+strlen(vet)+1)='\0';
+    //printf("\n%i",strlen(vet));
+}
+main(){
+char vet[100],c;
+printf("Digite uma frase:");
+gets(vet);
+printf("\nDigite um caractere:");
+c=getche();
+concatena(vet,c);
+printf("\nSTRING concatenada com o caractere %c: \n",c);
+puts(vet);
+}

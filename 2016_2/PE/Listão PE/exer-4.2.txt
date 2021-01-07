@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+/*
+4.2.
+Escreva uma função recursiva que retorne o resto da divisão entre dois números passados
+como parâmetro para a função. A função não pode utilizar o operador resto para fazer este cálculo.
+*/
+
+int resto(int i, int j){
+    if(i<j){
+        return i;
+    }
+    i-=j;
+    return resto(i,j);
+}
+
+main(){
+    int i=6,j=3;
+    printf("%i",resto(i,j));
+}

@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+/*
+3.5.
+Escreva um programa com as seguintes características:
+3.5.1 O  programa  deve  conter  uma  struct  global  para  cadastrar  terrenos  retangulares
+loteados. Os terrenos devem ter os atributos comprimento, largura, valor e nome do proprietário do terreno.*/
+struct terreno{
+    float comp;
+    float larg;
+    float valor;
+    char nome[60];
+};
+/*
+3.5.2.Na função main, pergunte quantos terrenos o usuário deseja cadastrar. Crie então
+uma  função  que  recebe  esse  número  como  parâmetro,  e  então  faça  o  cadastro  dos terrenos dentro da função.
+*/
+void cadastro(int t){
+    int i = 0;
+    struct terreno dados[t];
+    for(i=0;i<t;i++){
+        printf("Digite o comprimento do terreno %i:\n",i+1);
+        scanf("%f",&dados[i].comp);
+        printf("Digite a largura do terreno %i:\n",i+1);
+        scanf("%f",&dados[i].larg);
+        printf("Digite o valor do terreno %i:\n",i+1);
+        scanf("%f",&dados[i].valor);
+        fflush(stdin);
+        printf("Digite o nome do proprietario do terreno %i:\n",i+1);
+        scanf("%s",&dados[i].nome);
+        fflush(stdin);
+    }
+    system("cls");
+}
+
+int beneficio(int t){
+    struct terreno dados[t];
+    int i,menor;
+    float valor=0,area;
+    for(i=0;i<t;i++){
+        area = dados[i].valor/(dados[i].comp*dados[i].larg);
+        if(i==0){
+            valor=area;
+            menor = i+1;
+        }
+        if(area>valor){
+            valor = area;
+            menor = i+1;
+        }
+    }
+    return menor;
+}
+
+main(){
+int t,r;
+printf("Quantos terrenos deseja cadastrar?");
+scanf("%i",&t);
+cadastro(t);
+r = beneficio(t);
+printf("Terreno %i possui melhor custo-beneficio!",r);
+}

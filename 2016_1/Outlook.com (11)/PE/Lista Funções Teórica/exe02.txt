@@ -1,0 +1,8 @@
+﻿2. Qual a diferença entre um procedimento e uma função?
+
+
+Uma função recebe valores por parâmetro e te dá como retorno uma resposta, 
+já o procedimento não,
+ ela fará o que deve ser feito em uma função, como receber valores por parâmetro, 
+executar o código e tudo mais, 
+porém não retornará uma resposta.

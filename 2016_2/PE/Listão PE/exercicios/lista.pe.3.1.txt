@@ -1,0 +1,145 @@
+/**Elabore um programa que contenha uma struct global que possibilite o cadastro de animais de uma pet shop.
+Os animais devem ter os atributos nome, tipo do animal, dia, mês e ano de nascimento, e nome do dono*/
+/**Crie  então  uma  função  que  possibilite  o  cadastro  de  um  novo  animal,  pedindo  para  o usuário informar todos os atributos.*/
+/**Crie  também  uma  função  que  pergunte  para  o  usuário  uma  string.  Após,  mostre  na
+ tela todos  os  animais  que  tenham  em  seu  nome  ou  no  nome  do  seu  dono  a  string  informada pelo usuário*/
+/**Crie uma função que dado o nome de um animal, mostre na tela a idade deste animal.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct nascimento{
+    int dia;
+    int mes;
+    int ano;
+};
+struct animal{
+    char nome[50];
+    char tipo[50];
+    struct nascimento nasc;
+    char nome_dono[50];
+};
+void novo_cadastro(struct animal **pont, int cont_anim){
+    *pont=realloc(*pont, sizeof(struct animal)*(cont_anim+1));
+    printf("\nnome do animal:");
+    fflush(stdin);
+    gets((*pont+cont_anim)->nome);
+    printf("\ntipo do animal:");
+    fflush(stdin);
+    gets((*pont+cont_anim)->tipo);
+    printf("\nnascimento do animal(dia, mes e ano):\n");
+    fflush(stdin);
+    scanf("%i %i %i", &(*pont+cont_anim)->nasc.dia, &(*pont+cont_anim)->nasc.mes, &(*pont+cont_anim)->nasc.ano);
+    printf("\nnome do dono:");
+    fflush(stdin);
+    gets((*pont+cont_anim)->nome_dono);
+}
+void pesquisa(struct animal *pont, int cont_anim){
+int i;
+char pesquisa[50];
+printf("\npesquisar:");
+fflush(stdin);
+gets(pesquisa);
+            for(i=0;i<cont_anim;i++){
+                if(strstr((pont+i)->nome, pesquisa)!=NULL || strstr((pont+i)->nome_dono, pesquisa )!=NULL){
+                    printf("\n%s",(pont+i)->nome);
+                    printf("\n%s",(pont+i)->tipo);
+                    printf("\n%i / %i / %i",(pont+i)->nasc.dia, (pont+i)->nasc.mes, (pont+i)->nasc.ano);
+                    printf("\n%s", (pont+i)->nome_dono);
+                }
+            }
+
+}
+void pesquisar_idade(struct animal *pont, int animais){
+int i;
+char pesquisa[50];
+int d=13,m=7,a=2016;
+int idade;
+char lixo;
+printf("\npesquisar:");
+fflush(stdin);
+gets(pesquisa);
+    for(i=0;i<animais;i++){
+        if(!strcmp((pont+i)->nome, pesquisa)){
+               idade=a-(pont+i)->nasc.ano;
+               if(m<(pont+i)->nasc.mes){idade--;}
+               if(m==(pont+i)->nasc.mes && d<(pont+i)->nasc.dia){idade--;}
+               printf("\n%i", idade);
+               lixo=getch();
+        }
+    }
+
+}
+main(){
+
+FILE *arq=fopen("lista.pe.3.1", "rb");
+    if(arq==NULL){
+        arq=fopen("lista.pe.3.1", "wb");
+        fclose(arq);
+        arq=fopen("lista.pe.3.1", "rb");
+    }
+struct animal *pt;
+int cont_a=0;
+pt=malloc(sizeof(struct animal));
+
+while(!feof(arq)){///retorna zero enquanto não for o fim do arquivo
+    fread(pt+cont_a, sizeof(struct animal), 1, arq);
+      cont_a++;
+      if(!feof(arq)){
+            pt=realloc(pt, sizeof(struct animal)*(cont_a+1));
+        }else{cont_a--;}
+}
+
+fclose(arq);
+
+
+char opcao;
+int i;
+char lixo;
+    while(1){
+        printf("\nOPCOES\n(a)Novo cadastro\n(b)pesquisar por palavra\n(c)ver idade de um animal\n");
+        fflush(stdin);
+        scanf("%c", &opcao);
+        system("cls");
+
+        if(opcao=='a'){
+            novo_cadastro(&pt, cont_a);
+            cont_a++;
+                    /*printf("\n%s",(pt)->nome);
+                    printf("\n%s",(pt)->tipo);
+                    printf("\n%i / %i / %i",(pt)->nasc.dia, (pt)->nasc.mes, (pt)->nasc.ano);
+                    printf("\n%s", (pt)->nome_dono);*/
+        }
+
+        if(opcao=='b'){
+            pesquisa(pt, cont_a);
+            lixo=getch();
+        }
+        if(opcao=='c'){
+            pesquisar_idade(pt, cont_a);
+        }
+        /// //////////// teste
+        if(opcao=='4'){
+            int i;
+            for(i=0;i<cont_a;i++){
+                printf("\n%s\n%s\n\n", (pt+i)->nome, (pt+i)->nome_dono );
+            }
+        }
+        /// ///////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+arq= fopen("lista.pe.3.1", "wb");
+fwrite(pt, sizeof(struct animal), cont_a, arq);
+}

@@ -1,0 +1,15 @@
+20. Analise os dois códigos abaixo:
+
+int main(){
+	int x=10, *p, *q;  			Declaro 3 variáveis, x(que recebe 10), um ponteiro q, e um outro ponteiro q.
+	p = &x;						Ponteiro p recebe posição de memória de x (p aponta para x).
+	q = p;						Aqui declaro que q e p apontarão para o mesmo lugar, ou seja, x.
+}
+
+int main(){
+	int x=10, *p, **pp;			Declado 3 variáveis, x (que recebe 10), um ponteiro p, e um ponteiro de ponteiro pp;
+	p = &x;						Aqui o ponteiro p recebe posição de memória da variável x, ou seja, aponta para x
+	pp = &p;					Aqui declaro que o ponteiro pp aponta para o ponteiro p
+}
+
+Explique cada um deles, evidenciando as diferenças.
